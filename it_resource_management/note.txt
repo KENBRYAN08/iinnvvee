@@ -1,0 +1,128 @@
+ <!--   <form action="index.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+        <input type="text" name="resource_name" value="<?php echo $row['resource_name']; ?>" required>
+        <input type="text" name="type" value="<?php echo $row['type']; ?>" required>
+        <input type="text" name="specification" value="<?php echo $row['specification']; ?>" required>
+        <input type="text" name="status" value="<?php echo $row['status']; ?>" required>
+        <input type="text" name="allocated_to" value="<?php echo $row['allocated_to']; ?>" required>
+        <input type="date" name="date_allocated" value="<?php echo $row['date_allocated']; ?>" required>
+        <input type="submit" name="update_resource" value="Update Resource">
+</form> -->
+
+ <!--   $conn= new mysqli('localhost', 'root','' , 'it_resource_management');
+
+    if ($conn->connect_error) {
+        die ("Connection failed: " . $conn->connect_error);
+    }
+
+    if (isset($_POST['id'])) {
+        $id = $_POST['id'];
+        $result = $conn->query("SELECT * FROM resources WHERE id=$id");
+        $row = $result->fetch_assoc();
+    }
+-->
+
+//if (isset($_POST['update_resource'])) {
+ //   $id = $_POST['id'];
+ //   $resource_name = $_POST['resource_name'];
+  //  $type = $_POST['type'];
+ //   $specification = $_POST['specification'];
+//    $status = $_POST['status'];
+//    $allocated_to = $_POST['allocated_to'];
+//    $date_allocated = $_POST['date_allocated'];
+
+ //   $sql = "UPDATE resources SET resource_name='$resource_name', type='$type', specification='$specification', status='$status', allocated_to='$allocated_to', date_allocated='$date_allocated' WHERE id=$id";
+ //   $conn->query($sql);
+//}
+
+//if (isset($_POST['clear_resources'])) {
+ //   $sql = "TRUNCATE TABLE resources";
+ //   $conn->query($sql);
+//}
+
+
+//Fetch Resources
+
+<!--    <script type="text/javascript">
+       function confirmClearAll() {
+            return confirm('Are you sure you want to delete all data?');
+        }
+    </script> -->
+
+    <!--$conn = new mysqli('localhost', 'root', '', 'it_resource_management');
+    
+    if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+}
+
+if (isset($_POST['add_resource'])) {
+    $resource_name = $_POST['resource_name'];
+    $type = $_POST['type'];
+    $specification = $_POST['specification'];
+    $status = $_POST['status'];
+    $allocated_to = $_POST['allocated_to'];
+    $date_allocated = $_POST['date_allocated'];
+
+    $sql = "INSERT INTO resources (resource_name, type, specification, status, allocated_to, date_allocated)
+
+            VALUES ('$resource_name', '$type', '$specification', '$status', '$allocated_to', '$date_allocated')";
+    $conn->query($sql);
+}
+
+if (isset($_POST['delete_resource'])) {
+   $id = $_POST['id'];
+   $sql = "DELETE FROM resources WHERE id=$id";
+   $conn->query($sql);
+}
+
+if (isset($_POST['update_resource'])) {
+   $id = $_POST['id'];
+   $resource_name = $_POST['resource_name'];
+   $type = $_POST['type'];
+   $specification = $_POST['specification'];
+   $status = $_POST['status'];
+   $allocated_to = $_POST['allocated_to'];
+   $date_allocated = $_POST['date_allocated'];
+
+   $sql = "UPDATE resources SET resource_name='$resource_name', type='$type', specification='$specification', status='$status', allocated_to='$allocated_to', date_allocated='$date_allocated' WHERE id=$id";
+   $conn->query($sql);
+}
+
+if (isset($_POST['clear_all'])) {
+    $sql = "DELETE FROM resources";
+    $conn->query($sql);
+}
+
+   $result = $conn->query("SELECT * FROM resources");
+   while ($row = $result->fetch_assoc()) {
+       echo "<tr> 
+           <td>{$row['id']}</td>
+           <td>{$row['resource_name']}</td>
+           <td>{$row['type']}</td>
+           <td>{$row['specification']}</td>
+           <td>{$row['status']}</td>
+           <td>{$row['allocated_to']}</td>
+           <td>{$row['date_allocated']}</td>
+           <td>
+               <form style='display:inline;' action='edit_resource.php' method='post'>
+                   <input type='hidden' name='id' value='{$row['id']}'>
+                   <input type='submit' value='Edit'>
+               </form>
+               <form style='display:inline;' action='index.php' method='post'>
+                   <input type='hidden' name='id' value='{$row['id']}'>
+                   <input type='submit' name='delete_resource' value='Delete'>
+               </form>
+             </td>
+        </tr>";
+}
+
+   $conn->close();
+   ?>
+</table>
+<br>
+<form action="index.php" method="post" onsubmit="return confirmClearAll();">
+    <input type="submit" name="clear_all" value="Clear All">
+</form>
+
+</body>
+</html> -->
